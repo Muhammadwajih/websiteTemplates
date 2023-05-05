@@ -5820,7 +5820,7 @@ a.close.disabled {
 
 @media (min-width: 576px) {
   .modal-dialog {
-    max-width: 500px;
+    max-width: 700px;
     margin: 1.75rem auto;
   }
   .modal-dialog-scrollable {
@@ -11639,4 +11639,9 @@ body.sidebar-toggled footer.sticky-footer {
     position: static;
     margin-top: 30px;
   }
+}
+
+.settings
+{
+  margin-left: 10px;
 }
