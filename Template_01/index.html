@@ -37,17 +37,17 @@
         id="accordionSidebar"
       >
         <!-- Sidebar - Brand -->
-        <a
+        <!-- <a
           class="sidebar-brand d-flex align-items-center justify-content-center"
           href="index.html"
         >
-          <!-- <div class="sidebar-brand-icon rotate-n-15">
+          <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
-          </div> -->
+          </div>
           <div class="sidebar-brand-text mx-3">
             ZAHEEN SYSTEMS AI Development <sup></sup>
           </div>
-        </a>
+        </a> -->
 
         <!-- Divider -->
         <hr class="sidebar-divider my-0" />
@@ -56,7 +56,7 @@
         <hr class="sidebar-divider" />
 
         <!-- Heading -->
-        <div class="sidebar-heading">ALL Videos</div>
+        <div class="sidebar-heading">Instances</div>
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
@@ -173,7 +173,7 @@
               <i class="fa fa-bars"></i>
             </button>
 
-            <h4 class="headtext">Welcome to CVEDIA-RT</h4>
+            <h5 class="headtext">ZAHEEN SYSTEMS AI Development</h5>
           </nav>
 
           <!-- Begin Page Content -->
@@ -187,39 +187,441 @@
               </h1> -->
             </div>
 
-            <!--Options -->
-            <div class="form-group">
-              <div class="row settings">
-                <span style="margin-top: 5px">
-                  <label for="presetoptions"><b>Preset: </b></label>
-                </span>
-                <div class="col-xl-4 col-lg-4">
-                  <select class="form-control" id="presetoptions">
-                    <option>default</option>
-                    <option>labels</option>
-                    <option>Stylist</option>
-                    <option>Confidence</option>
-                  </select>
-                </div>
-                <div class="col-xl-2 col-lg-2">
-                  <button class="btn btn-primary">Save</button>
-                  <button class="btn btn-secondary">Delete</button>
-                </div>
-                <span style="margin-top: 5px">
-                  <label for="imageoptions"><b>Image: </b></label>
-                </span>
-                <div class="col-xl-4 col-lg-4">
-                  <select class="form-control" id="imageoptions">
-                    <option>Input Image</option>
-                    <option>Output Image</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <!-- Options -->
+            <!-- rowFirst -->
 
             <div class="row">
-              <div class="col-xl-12 col-lg-12">
+              <div class="col-xl-3 col-lg-3">
+                <!-- options -->
+                <div class="form-group">
+                  <div class="row settings">
+                    <span style="margin-top: 5px">
+                      <label for="presetoptions"><b>Preset: </b></label>
+                    </span>
+                    <div class="col-xl-4 col-lg-4">
+                      <select class="form-control" id="presetoptions">
+                        <option>default</option>
+                        <option>labels</option>
+                        <option>Stylist</option>
+                        <option>Confidence</option>
+                      </select>
+                    </div>
+                    <button class="btn btn-primary btn-sm btnPos">Save</button>
+                    <button class="btn btn-secondary btn-sm btnPos">
+                      Delete
+                    </button>
+                  </div>
+                  <div class="row"></div>
+                  <div class="row settings">
+                    <span style="margin-top: 5px">
+                      <label for="imageoptions"><b>Image: </b></label>
+                    </span>
+                    <div class="col-xl-10 col-lg-10">
+                      <select class="form-control" id="imageoptions">
+                        <option>Input Image</option>
+                        <option>Output Image</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!-- End of options -->
+                <div id="accordion" class="row col-lg-12 col-xl-12">
+                  <div class="col-lg-6">
+                    <label><b>Output Data</b></label>
+                  </div>
+                  <div class="card col-xl-12 col-lg-12">
+                    <div class="card-headeroptions" id="headingOne">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn btn-link"
+                          data-toggle="collapse"
+                          data-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          Raw Detections
+                        </button>
+                      </h5>
+                    </div>
+
+                    <div
+                      id="collapseOne"
+                      class="collapse show"
+                      aria-labelledby="headingOne"
+                      data-parent="#accordion"
+                    >
+                      <div class="card-body">
+                        <form>
+                          <div class="form-group">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="Show"
+                              />
+                              <label class="form-check-label" for="checkbox1">
+                                Show
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="Override"
+                              />
+                              <label class="form-check-label" for="checkbox2">
+                                Override data
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="checkbox3"
+                              />
+                              <label class="form-check-label" for="checkbox3">
+                                Events Only
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="labelasicon"
+                              />
+                              <label class="form-check-label" for="checkbox1">
+                                Label as icon
+                              </label>
+                            </div>
+                            <!-- Dropdown Style -->
+                            <div class="row settings">
+                              <div
+                                class="col-xl-3 col-lg-3"
+                                style="margin-top: 5px"
+                              >
+                                <label for="RStyle"><b>Style: </b></label>
+                              </div>
+                              <div class="col-xl-9 col-lg-9">
+                                <select class="form-control" id="RStyle">
+                                  <option value="Rectangle">Rectangle</option>
+                                  <option value="Rectangle">Ellipis</option>
+                                  <option value="Rectangle">Lightweight</option>
+                                </select>
+                              </div>
+                            </div>
+                            <!-- End Dropdown Style -->
+
+                            <!-- Dropdown Label -->
+                            <div class="row settings">
+                              <div
+                                class="col-xl-3 col-lg-3"
+                                style="margin-top: 5px"
+                              >
+                                <label for="Rlabel"><b>Label: </b></label>
+                              </div>
+                              <div class="col-xl-9 col-lg-9">
+                                <select class="form-control" id="Rlabel">
+                                  <option value="None">None</option>
+                                  <option value="Label">Label</option>
+                                  <option value="Label(confidence)">
+                                    Label(confidence)
+                                  </option>
+                                  <option value="Multiline">Multiline</option>
+                                  <option value="Confidence">Confidence</option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <!-- End Dropdown label -->
+
+                            <!-- Dropdown Label align -->
+                            <div class="row settings">
+                              <div
+                                class="col-xl-4 col-lg-4"
+                                style="margin-top: 5px"
+                              >
+                                <label for="RLabelalign"
+                                  ><b>Label align: </b></label
+                                >
+                              </div>
+                              <div class="col-xl-8 col-lg-8">
+                                <select class="form-control" id="RLabelalign">
+                                  <option value="Top-left">Top-left</option>
+                                  <option value="Top-left">Top-left</option>
+                                  <option value="Bottom-left">
+                                    Bottom-left
+                                  </option>
+                                  <option value="Bottom-right">
+                                    Bottom-right
+                                  </option>
+                                  <option value="Top-center">Top-center</option>
+                                  <option value="center">center</option>
+                                  <option value="Bottom-center">
+                                    Bottom-center
+                                  </option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <!-- End Dropdown label align-->
+
+                            <!-- percentage -->
+
+                            <div class="row settings">
+                              <div
+                                class="col-xl-4 col-lg-4"
+                                style="margin-top: 5px"
+                              >
+                                <label><b>Percentage :</b></label>
+                              </div>
+                              <div class="col-xl-8 col-lg-8">
+                                <input
+                                  step="0.01"
+                                  value="15.25"
+                                  type="number"
+                                  id="perc"
+                                  class="form-control"
+                                />
+                              </div>
+                            </div>
+
+                            <!-- end of percentage -->
+                            <!-- Font Scale -->
+                            <div class="row settings">
+                              <div
+                                class="col-xl-4 col-lg-4"
+                                style="margin-top: 5px"
+                              >
+                                <label><b>Font Scale:</b></label>
+                              </div>
+                              <div class="col-xl-8 col-lg-8">
+                                <input
+                                  step="0.01"
+                                  value="15.25"
+                                  type="number"
+                                  id="fontscale"
+                                  class="form-control"
+                                />
+                              </div>
+                            </div>
+
+                            <!-- end of Font Scale -->
+                            <!-- Thickness -->
+                            <div class="row settings">
+                              <div
+                                class="col-xl-3 col-lg-3"
+                                style="margin-top: 5px"
+                              >
+                                <label><b>Thickness:</b></label>
+                              </div>
+                              <div class="col-xl-9 col-lg-9">
+                                <input
+                                  min="1"
+                                  max="10"
+                                  type="number"
+                                  id="thickness"
+                                  class="form-control"
+                                />
+                              </div>
+                            </div>
+
+                            <!-- end of Thickness -->
+                            <!-- Padding -->
+                            <div class="row settings">
+                              <div
+                                class="col-xl-3 col-lg-3"
+                                style="margin-top: 5px"
+                              >
+                                <label><b>Padding:</b></label>
+                              </div>
+                              <div class="col-xl-9 col-lg-9">
+                                <input
+                                  step="0.01"
+                                  min="1"
+                                  max="2"
+                                  type="number"
+                                  id="padding"
+                                  class="form-control"
+                                />
+                              </div>
+                            </div>
+
+                            <!-- End of Padding -->
+                            <div class="row">
+                              <div class="col-lg-3">
+                                <!-- font color -->
+                                <label for="fontcolor" class="form-label"
+                                  >Font color:
+                                </label>
+                                <input
+                                  style="width: 50px"
+                                  type="color"
+                                  class="form-control form-control-color"
+                                  id="fontcolor"
+                                  value="#563d7c"
+                                />
+
+                                <!-- end of font color -->
+                              </div>
+                              <div class="col-lg-4">
+                                <!-- Use Data color -->
+                                <label for="UseDatacolor" class="form-label"
+                                  >Use data color:</label
+                                >
+                                <input
+                                  style="width: 50px"
+                                  type="color"
+                                  class="form-control form-control-color"
+                                  id="UseDatacolor"
+                                  value="#563d7c"
+                                />
+                                <!-- End of use Data color -->
+                              </div>
+                              <div class="col-lg-3">
+                                <!-- Border color -->
+                                <label for="bordercolor" class="form-label"
+                                  >Border color:</label
+                                >
+                                <input
+                                  style="width: 50px"
+                                  type="color"
+                                  class="form-control form-control-color"
+                                  id="bordercolor"
+                                  value="#563d7c"
+                                />
+                                <!-- End of use Data color -->
+                              </div>
+                              <div class="col-lg-2">
+                                <!-- Fill color -->
+                                <label for="fillcolor" class="form-label"
+                                  >Fill color:</label
+                                >
+                                <input
+                                  style="width: 50px"
+                                  type="color"
+                                  class="form-control form-control-color"
+                                  id="fillcolor"
+                                  value="#563d7c"
+                                />
+                                <!-- End of use Data color -->
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <label><b>Tools</b></label>
+                  </div>
+
+                  <div class="card col-xl-12 col-lg-12">
+                    <div class="card-headeroptions" id="headingThree">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn btn-link collapsed"
+                          data-toggle="collapse"
+                          data-target="#collapseThree"
+                          aria-expanded="false"
+                          aria-controls="collapseThree"
+                        >
+                          Detector diff
+                        </button>
+                      </h5>
+                    </div>
+                    <div
+                      id="collapseThree"
+                      class="collapse"
+                      aria-labelledby="headingThree"
+                      data-parent="#accordion"
+                    >
+                      <div class="card-body">
+                        <!-- Data Goes Here -->
+                        <form>
+                          <div class="form-group">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="DetecShow"
+                              />
+                              <label class="form-check-label" for="checkbox1">
+                                Show
+                              </label>
+                            </div>
+                            <!-- Dropdown Network A -->
+                            <label for="DNetworkA"><b>Network A: </b></label>
+                            <select class="form-control" id="DNetworkA">
+                              <option value="Rectangle"></option>
+                            </select>
+                            <!-- End Dropdown Network A -->
+
+                            <!-- Dropdown Network B -->
+                            <label for="DNetworkB"><b>Network B: </b></label>
+                            <select class="form-control" id="DNetworkB">
+                              <option value="Rectangle"></option>
+                            </select>
+                            <!-- End Dropdown Network B -->
+
+                            <!-- IoU Thickhness -->
+                            <label><b>IoU Thickhness:</b></label>
+                            <input
+                              min="1"
+                              max="10"
+                              type="number"
+                              id="IoUThickhness:"
+                              class="form-control"
+                            />
+                            <!-- end of IoU Thickhness -->
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card col-xl-12 col-lg-12">
+                    <div class="card-headeroptions" id="headingtwo">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn btn-link collapsed"
+                          data-toggle="collapse"
+                          data-target="#collapsetwo"
+                          aria-expanded="false"
+                          aria-controls="collapsetwo"
+                        >
+                          Overlay Interface
+                        </button>
+                      </h5>
+                    </div>
+                    <div
+                      id="collapsetwo"
+                      class="collapse"
+                      aria-labelledby="headingtwo"
+                      data-parent="#accordion"
+                    >
+                      <div class="card-body">
+                        <!-- code Goes Here -->
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="overlayShow"
+                          />
+                          <label class="form-check-label" for="checkbox1">
+                            Show
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-9 col-lg-9">
                 <div class="card shadow mb-4">
                   <!-- Card Header - Dropdown -->
                   <div
@@ -266,400 +668,6 @@
                           </div>
                           <div class="modal-body">
                             <!-- model-Body goes here -->
-                            <div id="accordion" class="row col-lg-12 col-xl-12">
-                              <div class="col-lg-4">
-                                <label><b>Output Data</b></label>
-                              </div>
-                              <div class="card col-xl-12 col-lg-12">
-                                <div class="card-header" id="headingOne">
-                                  <h5 class="mb-0">
-                                    <button
-                                      class="btn btn-link"
-                                      data-toggle="collapse"
-                                      data-target="#collapseOne"
-                                      aria-expanded="true"
-                                      aria-controls="collapseOne"
-                                    >
-                                      Raw Detections
-                                    </button>
-                                  </h5>
-                                </div>
-
-                                <div
-                                  id="collapseOne"
-                                  class="collapse show"
-                                  aria-labelledby="headingOne"
-                                  data-parent="#accordion"
-                                >
-                                  <div class="card-body">
-                                    <form>
-                                      <div class="form-group">
-                                        <div class="form-check">
-                                          <input
-                                            class="form-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="Show"
-                                          />
-                                          <label
-                                            class="form-check-label"
-                                            for="checkbox1"
-                                          >
-                                            Show
-                                          </label>
-                                        </div>
-                                        <div class="form-check">
-                                          <input
-                                            class="form-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="Override"
-                                          />
-                                          <label
-                                            class="form-check-label"
-                                            for="checkbox2"
-                                          >
-                                            Override data
-                                          </label>
-                                        </div>
-                                        <div class="form-check">
-                                          <input
-                                            class="form-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="checkbox3"
-                                          />
-                                          <label
-                                            class="form-check-label"
-                                            for="checkbox3"
-                                          >
-                                            Events Only
-                                          </label>
-                                        </div>
-                                        <div class="form-check">
-                                          <input
-                                            class="form-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="labelasicon"
-                                          />
-                                          <label
-                                            class="form-check-label"
-                                            for="checkbox1"
-                                          >
-                                            Label as icon
-                                          </label>
-                                        </div>
-                                        <!-- Dropdown Style -->
-                                        <label for="RStyle"
-                                          ><b>Style: </b></label
-                                        >
-                                        <select
-                                          class="form-control"
-                                          id="RStyle"
-                                        >
-                                          <option value="Rectangle">
-                                            Rectangle
-                                          </option>
-                                          <option value="Rectangle">
-                                            Ellipis
-                                          </option>
-                                          <option value="Rectangle">
-                                            Lightweight
-                                          </option>
-                                        </select>
-                                        <!-- End Dropdown Style -->
-
-                                        <!-- Dropdown Label -->
-                                        <label for="Rlabel"
-                                          ><b>Label: </b></label
-                                        >
-                                        <select
-                                          class="form-control"
-                                          id="Rlabel"
-                                        >
-                                          <option value="None">None</option>
-                                          <option value="Label">Label</option>
-                                          <option value="Label(confidence)">
-                                            Label(confidence)
-                                          </option>
-                                          <option value="Multiline">
-                                            Multiline
-                                          </option>
-                                          <option value="Confidence">
-                                            Confidence
-                                          </option>
-                                        </select>
-                                        <!-- End Dropdown label -->
-
-                                        <!-- Dropdown Label -->
-                                        <label for="RLabelalign"
-                                          ><b>Label align: </b></label
-                                        >
-                                        <select
-                                          class="form-control"
-                                          id="RLabelalign"
-                                        >
-                                          <option value="Top-left">
-                                            Top-left
-                                          </option>
-                                          <option value="Top-left">
-                                            Top-left
-                                          </option>
-                                          <option value="Bottom-left">
-                                            Bottom-left
-                                          </option>
-                                          <option value="Bottom-right">
-                                            Bottom-right
-                                          </option>
-                                          <option value="Top-center">
-                                            Top-center
-                                          </option>
-                                          <option value="center">center</option>
-                                          <option value="Bottom-center">
-                                            Bottom-center
-                                          </option>
-                                        </select>
-                                        <!-- End Dropdown label -->
-
-                                        <!-- percentage -->
-
-                                        <label><b>Percentage :</b></label>
-                                        <input
-                                          step="0.01"
-                                          value="15.25"
-                                          type="number"
-                                          id="perc"
-                                          class="form-control"
-                                        />
-
-                                        <!-- end of percentage -->
-                                        <!-- Font Scale -->
-
-                                        <label><b>Font Scale:</b></label>
-                                        <input
-                                          step="0.01"
-                                          value="15.25"
-                                          type="number"
-                                          id="fontscale"
-                                          class="form-control"
-                                        />
-                                        <!-- end of Font Scale -->
-                                        <!-- Thickness -->
-                                        <label><b>Thickness:</b></label>
-                                        <input
-                                          min="1"
-                                          max="10"
-                                          type="number"
-                                          id="thickness"
-                                          class="form-control"
-                                        />
-                                        <!-- end of Thickness -->
-                                        <!-- Padding -->
-                                        <label><b>Padding:</b></label>
-                                        <input
-                                          step="0.01"
-                                          min="1"
-                                          max="2"
-                                          type="number"
-                                          id="padding"
-                                          class="form-control"
-                                        />
-                                        <!-- End of Padding -->
-                                        <div class="row">
-                                          <div class="col-lg-3">
-                                            <!-- font color -->
-                                            <label
-                                              for="fontcolor"
-                                              class="form-label"
-                                              >Font color:
-                                            </label>
-                                            <input
-                                              style="width: 50px"
-                                              type="color"
-                                              class="form-control form-control-color"
-                                              id="fontcolor"
-                                              value="#563d7c"
-                                            />
-
-                                            <!-- end of font color -->
-                                          </div>
-                                          <div class="col-lg-4">
-                                            <!-- Use Data color -->
-                                            <label
-                                              for="UseDatacolor"
-                                              class="form-label"
-                                              >Use data color:</label
-                                            >
-                                            <input
-                                              style="width: 50px"
-                                              type="color"
-                                              class="form-control form-control-color"
-                                              id="UseDatacolor"
-                                              value="#563d7c"
-                                            />
-                                            <!-- End of use Data color -->
-                                          </div>
-                                          <div class="col-lg-3">
-                                            <!-- Border color -->
-                                            <label
-                                              for="bordercolor"
-                                              class="form-label"
-                                              >Border color:</label
-                                            >
-                                            <input
-                                              style="width: 50px"
-                                              type="color"
-                                              class="form-control form-control-color"
-                                              id="bordercolor"
-                                              value="#563d7c"
-                                            />
-                                            <!-- End of use Data color -->
-                                          </div>
-                                          <div class="col-lg-2">
-                                            <!-- Fill color -->
-                                            <label
-                                              for="fillcolor"
-                                              class="form-label"
-                                              >Fill color:</label
-                                            >
-                                            <input
-                                              style="width: 50px"
-                                              type="color"
-                                              class="form-control form-control-color"
-                                              id="fillcolor"
-                                              value="#563d7c"
-                                            />
-                                            <!-- End of use Data color -->
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </form>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="col-lg-4">
-                                <label><b>Tools</b></label>
-                              </div>
-
-                              <div class="card col-xl-12 col-lg-12">
-                                <div class="card-header" id="headingThree">
-                                  <h5 class="mb-0">
-                                    <button
-                                      class="btn btn-link collapsed"
-                                      data-toggle="collapse"
-                                      data-target="#collapseThree"
-                                      aria-expanded="false"
-                                      aria-controls="collapseThree"
-                                    >
-                                      Detector diff
-                                    </button>
-                                  </h5>
-                                </div>
-                                <div
-                                  id="collapseThree"
-                                  class="collapse"
-                                  aria-labelledby="headingThree"
-                                  data-parent="#accordion"
-                                >
-                                  <div class="card-body">
-                                    <!-- Data Goes Here -->
-                                    <form>
-                                      <div class="form-group">
-                                        <div class="form-check">
-                                          <input
-                                            class="form-check-input"
-                                            type="checkbox"
-                                            value=""
-                                            id="DetecShow"
-                                          />
-                                          <label
-                                            class="form-check-label"
-                                            for="checkbox1"
-                                          >
-                                            Show
-                                          </label>
-                                        </div>
-                                        <!-- Dropdown Network A -->
-                                        <label for="DNetworkA"
-                                          ><b>Network A: </b></label
-                                        >
-                                        <select
-                                          class="form-control"
-                                          id="DNetworkA"
-                                        >
-                                          <option value="Rectangle"></option>
-                                        </select>
-                                        <!-- End Dropdown Network A -->
-
-                                        <!-- Dropdown Network B -->
-                                        <label for="DNetworkB"
-                                          ><b>Network B: </b></label
-                                        >
-                                        <select
-                                          class="form-control"
-                                          id="DNetworkB"
-                                        >
-                                          <option value="Rectangle"></option>
-                                        </select>
-                                        <!-- End Dropdown Network B -->
-
-                                        <!-- IoU Thickhness -->
-                                        <label><b>IoU Thickhness:</b></label>
-                                        <input
-                                          min="1"
-                                          max="10"
-                                          type="number"
-                                          id="IoUThickhness:"
-                                          class="form-control"
-                                        />
-                                        <!-- end of IoU Thickhness -->
-                                      </div>
-                                    </form>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="card col-xl-12 col-lg-12">
-                                <div class="card-header" id="headingtwo">
-                                  <h5 class="mb-0">
-                                    <button
-                                      class="btn btn-link collapsed"
-                                      data-toggle="collapse"
-                                      data-target="#collapsetwo"
-                                      aria-expanded="false"
-                                      aria-controls="collapsetwo"
-                                    >
-                                      Overlay Interface
-                                    </button>
-                                  </h5>
-                                </div>
-                                <div
-                                  id="collapsetwo"
-                                  class="collapse"
-                                  aria-labelledby="headingtwo"
-                                  data-parent="#accordion"
-                                >
-                                  <div class="card-body">
-                                    <!-- code Goes Here -->
-                                    <div class="form-check">
-                                      <input
-                                        class="form-check-input"
-                                        type="checkbox"
-                                        value=""
-                                        id="overlayShow"
-                                      />
-                                      <label
-                                        class="form-check-label"
-                                        for="checkbox1"
-                                      >
-                                        Show
-                                      </label>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
                           </div>
                           <div class="modal-footer">
                             <button
@@ -678,11 +686,11 @@
                     </div>
                   </div>
                   <!-- Card Body -->
-                  <section id="about" class="about">
+                  <section id="about" class="about" style="height: 450px">
                     <div class="container">
                       <div class="row no-gutters">
                         <div class="col-lg-12 video-box">
-                          <img src="img/about.jpg" class="img-fluid" alt="" />
+                          <img src="img/about.jpeg" class="img-fluid" alt="" />
                           <a
                             href="https://youtu.be/GLTEFPIGyfw"
                             class="venobox play-btn mb-4"
@@ -690,10 +698,6 @@
                             data-autoplay="true"
                           ></a>
                         </div>
-
-                        <div
-                          class="col-lg-6 d-flex flex-column justify-content-center about-content"
-                        ></div>
                       </div>
                     </div>
                   </section>
@@ -707,22 +711,210 @@
               </div>
             </div>
 
-            <!-- Content Row -->
+            <!-- End of rowFirst -->
+
+            <!-- RowSecond -->
+            <br />
+            <hr />
             <div class="row">
-              <!-- Content Column -->
-              <div class="col-lg-6 mb-4">
-                <!-- Project Card Example -->
+              <div class="col-xl-3 col-lg-3">
+                <!-- options -->
+                <div class="form-group">
+                  <div class="row settings">
+                    <div class="col-xl-3 col-lg-3" style="margin-top: 5px">
+                      <label for="presetoptions"><b>Data: </b></label>
+                    </div>
+                    <div class="col-xl-9 col-lg-9">
+                      <select class="form-control" id="presetoptions">
+                        <option>detections</option>
+                        <option>zones</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row settings">
+                    <div class="col-xl-3 col-lg-3" style="margin-top: 5px">
+                      <label for="imageoptions"><b>Image: </b></label>
+                    </div>
+                    <div class="col-xl-9 col-lg-9">
+                      <select class="form-control" id="imageoptions">
+                        <option>Input Image</option>
+                        <option>Output Image</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row settings">
+                    <div class="col-xl-3 col-lg-3" style="margin-top: 5px">
+                      <label for="imageoptions"><b>Display: </b></label>
+                    </div>
+                    <div class="col-xl-9 col-lg-9">
+                      <select class="form-control" id="imageoptions">
+                        <option>counting</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- History(Second) -->
+                  <div class="row settings">
+                    <div class="col-xl-4 col-lg-4" style="margin-top: 5px">
+                      <label><b>History (Second):</b></label>
+                    </div>
+                    <div class="col-xl-8 col-lg-8">
+                      <input
+                        min="1"
+                        max="60"
+                        type="number"
+                        id="thickness"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <!-- end of History(Second) -->
 
-                <!-- Color System -->
+                  <!-- Line Thickness -->
+                  <div class="row settings">
+                    <div class="col-xl-4 col-lg-4" style="margin-top: 5px">
+                      <label><b>Line Thickness:</b></label>
+                    </div>
+                    <div class="col-xl-8 col-lg-8">
+                      <input
+                        min="1"
+                        max="10"
+                        type="number"
+                        id="thickness"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <!-- End of Line Thickness -->
+
+                  <div class="row settings">
+                    <div class="col-xl-4 col-lg-4" style="margin-top: 5px">
+                      <label for="linecolor" class="form-label"
+                        ><b>Line color:</b>
+                      </label>
+                    </div>
+                    <div class="col-xl-8 col-lg-8">
+                      <input
+                        style="width: 50px"
+                        type="color"
+                        class="form-control form-control-color"
+                        id="linecolor"
+                        value="#563d7c"
+                      />
+                    </div>
+                  </div>
+                  <div class="row settings">
+                    <div class="col-xl-4 col-lg-4" style="margin-top: 5px">
+                      <label for="linecolor" class="form-label"
+                        ><b>Object Count Color:</b>
+                      </label>
+                    </div>
+                    <div class="col-xl-8 col-lg-8">
+                      <input
+                        style="width: 50px"
+                        type="color"
+                        class="form-control form-control-color"
+                        id="objectcountcolor"
+                        value="#563d7c"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- End of options -->
               </div>
+              <div class="col-xl-9 col-lg-9">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div
+                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+                  >
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Data Visualizer
+                    </h6>
 
-              <div class="col-lg-6 mb-4">
-                <!-- Illustrations -->
+                    <div>
+                      <i
+                        class="fa fa-cog"
+                        aria-hidden="true"
+                        data-toggle="modal"
+                        data-target="#exampleModalCenter"
+                      ></i>
+                    </div>
+                    <div
+                      class="modal fade"
+                      id="exampleModalCenter"
+                      tabindex="-1"
+                      role="dialog"
+                      aria-labelledby="exampleModalCenterTitle"
+                      aria-hidden="true"
+                    >
+                      <div
+                        class="modal-dialog modal-dialog-centered"
+                        role="document"
+                      >
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5
+                              class="modal-title"
+                              id="exampleModalCenterTitle"
+                            >
+                              Video Settings
+                            </h5>
+                            <button
+                              type="button"
+                              class="close"
+                              data-dismiss="modal"
+                              aria-label="Close"
+                            >
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <!-- model-Body goes here -->
+                          </div>
+                          <div class="modal-footer">
+                            <button
+                              type="button"
+                              class="btn btn-secondary"
+                              data-dismiss="modal"
+                            >
+                              Close
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                              Save changes
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card Body -->
+                  <section id="about" class="about" style="height: 360px">
+                    <div class="container">
+                      <div class="row no-gutters">
+                        <div class="col-lg-12 video-box">
+                          <img src="img/graph.jpeg" class="img-fluid" alt="" />
+                          <a
+                            href="https://youtu.be/GLTEFPIGyfw"
+                            class="venobox play-btn mb-4"
+                            data-vbtype="video"
+                            data-autoplay="true"
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
 
-                <!-- Approach -->
+                  <!-- <div class="card-body">
+                    <div class="chart-area">
+                      <canvas id="myAreaChart"></canvas>
+                    </div>
+                  </div> -->
+                </div>
               </div>
             </div>
+            <!-- End of RowSecond -->
           </div>
+
           <!-- /.container-fluid -->
         </div>
         <!-- End of Main Content -->
@@ -731,7 +923,7 @@
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Muhammad Wajih ul Murtaza</span>
+              <span>Copyright &copy; ZAHEEN SYSTEMS AI development</span>
             </div>
           </div>
         </footer>
